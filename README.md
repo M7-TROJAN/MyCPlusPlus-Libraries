@@ -1,6 +1,6 @@
 # MyCppLibraries
 
-Welcome to the MyCppLibraries repository! This repository contains a collection of C++ libraries developed by [mattar740].
+Welcome to the MyCppLibraries repository! This repository contains a collection of C++ libraries developed by ME [mattar740].
 
 ## Libraries
 
