@@ -10,6 +10,16 @@ The `date` library provides functions to handle date-related operations. It offe
 
 #### Usage
 
+```cpp
+#include <iostream>
+#include "date.h"
+
+int main() {
+    Date today = Date::getCurrentDate();
+    std::cout << "Today's date: " << today.toString() << std::endl;
+    return 0;
+}
+
 #include <iostream>
 #include "date.h"
 
