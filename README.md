@@ -69,7 +69,9 @@ int main() {
 
 ### File Structure
 Each library consists of two files:
+
 Header file (.h): Contains function declarations and class definitions.
+
 Implementation file (.cpp): Contains the actual implementation of the functions.
 
 
