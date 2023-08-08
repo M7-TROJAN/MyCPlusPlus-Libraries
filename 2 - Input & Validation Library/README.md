@@ -47,7 +47,7 @@ The `clsInputValidate` library provides a variety of functions to validate and r
 - Read a PIN code from the user with validation for a 4-digit numeric value.
 - Read a phone number from the user with validation for an 11-digit numeric value.
 
-For detailed usage instructions and examples, refer to the Examples section.
+For detailed usage instructions and examples, refer to the [Examples](#examples) section.
 
 
 ## Functions
@@ -113,9 +113,11 @@ int main() {
 ## Contributing
 If you find any issues or have suggestions for improvements, feel free to contact me 🫶❤️.
 
-Author: Your Name
-Email: your.email@example.com
-LinkedIn: Your LinkedIn Profile
+- Author: Mahmoud Mohamed
+- Email: mahmoud.abdalaziz@outlook.com
+- LinkedIn: [Mahmoud Mohamed Abdalaziz](https://www.linkedin.com/in/mahmoud-mohamed-abd/)
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
