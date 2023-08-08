@@ -76,29 +76,29 @@ Implementation file (.cpp): Contains the actual implementation of the functions.
 
 
 MyCppLibraries/
-│
-├── date/
-│ ├── date.h
-│ ├── date.cpp
-│
-├── get_inputs/
-│ ├── get_inputs.h
-│ ├── get_inputs.cpp
-│
-├── mathematic/
-│ ├── mathematic.h
-│ ├── mathematic.cpp
-│
-├── str/
-│ ├── str.h
-│ ├── str.cpp
-│
-├── FinalProject/
-│ ├── mywebapp/
-│ ├── ...
-│ └── README.md
-│
-└── README.md
+- │
+- ├── date/
+- │ ├── date.h
+- │ ├── date.cpp
+- │
+- ├── get_inputs/
+- │ ├── get_inputs.h
+- │ ├── get_inputs.cpp
+- │
+- ├── mathematic/
+- │ ├── mathematic.h
+- │ ├── mathematic.cpp
+- │
+- ├── str/
+- │ ├── str.h
+- │ ├── str.cpp
+- │
+- ├── FinalProject/
+- │ ├── mywebapp/
+- │ ├── ...
+- │ └── README.md
+- │
+- └── README.md
 
 
 
