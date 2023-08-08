@@ -36,7 +36,7 @@ The `util` library provides a range of utility functions that you can use in you
 - Generate strong passwords and keys.
 - Check if arrays or vectors are palindromes.
 - Shuffle arrays and vectors.
-- For detailed usage instructions and examples, refer to the [Examples](#examples section.
+- For detailed usage instructions and examples, refer to the [Examples](#examples) section.
 
 ## Features
 
