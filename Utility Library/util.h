@@ -8,6 +8,8 @@
 
 class util
 {
+    util() {} // Private constructor to prevent object creation
+
     // Function to convert a number to its textual representation
     static std::string numberToText(const long long &number)
     {
