@@ -76,7 +76,7 @@ else
 
 ## Author
 
-If you find any issues or have suggestions for improvements, feel free to contact me 🫶❤️.
+- If you find any issues or have suggestions for improvements, feel free to contact me 🫶❤️.
 
 - Mahmoud Mohamed
 - Email: mahmoud.abdalaziz@outlook.com
