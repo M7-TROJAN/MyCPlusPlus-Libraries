@@ -28,7 +28,7 @@
 | REQ25      | Medium   | The system shall send a 6-digit code to confirm enabling two-factor authentication.                                                          |
 | REQ26      | Medium   | The system shall log out the user after successful 2FA code entry.                                                                           |
 | REQ27      | Medium   | The system shall send a new 6-digit code for confirmation when needed.                                                                       |
-| REQ28      | Medium   | if two-factor is enable The system shall prompt the user to enter the 2FA code after login.                                                  |
+| REQ28      | Medium   | The system shall prompt users to enter a 6-digit two-factor authentication code after login, if 2FA is enabled.                              |
 | REQ29      | Medium   | The system shall allow users to disable two-factor authentication.                                                                           |
 | REQ30      | Medium   | The system shall log out users after disabling two-factor authentication.                                                                    |
 | REQ31      | High     | The system shall allow archive staff to search for any category in the database.                                                             |
@@ -75,7 +75,7 @@
 | REQ72      | High     | The system shall check for existing valid rentals and prevent new ones if present.                                                           |
 | REQ73      | High     | The system shall allow searching books during rental creation.                                                                               |
 | REQ74      | Medium   | The system shall allow adding/removing books in a rental before saving.                                                                      |
-| REQ75      | High     | The system shall ensure rentals do not exceed 3 books.                                                                                       |
+| REQ75      | High     | The system shall prevent rentals from exceeding a maximum of 3 books per rental.                                                             |
 | REQ76      | High     | The system shall display an error if rental exceeds 3 books.                                                                                 |
 | REQ77      | Medium   | The system shall allow cancelling/editing rentals within 24 hours.                                                                           |
 | REQ78      | Medium   | The system shall allow extending rentals by 7 days after 24 hours.                                                                           |
@@ -94,4 +94,5 @@
 | REQ91      | Low      | The system shall allow admin to copy users table content.                                                                                    |
 | REQ92      | Medium   | The system shall allow admin to print the users table.                                                                                       |
 | REQ93      | High     | The system shall allow The Super Admin to have full access to perform any operation that is permitted to other user roles across the system. |
-| REQ94      | Medium   | The system shall allow just super admin to view the subscribers list.                                                                        |
+| REQ94      | Medium   | he system shall allow only the Super Admin to view the list of all subscribers.                                                              |
+| REQ95      | Low      | The system shall log user activities (e.g., login, logout, record edits) for auditing purposes.                                              |
