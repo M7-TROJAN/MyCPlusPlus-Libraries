@@ -2,7 +2,7 @@
 
 ### sub Section Title: **Background Job: Notification Services**
 
-### 📌 Overview:
+###  Overview:
 
 The system includes two scheduled background jobs implemented via **Hangfire**, responsible for sending automated notifications to users via **Email** and **WhatsApp**, in two critical scenarios:
 
@@ -11,7 +11,7 @@ The system includes two scheduled background jobs implemented via **Hangfire**, 
 
 ---
 
-### 🔁 1. Subscription Expiration Notification
+###  1. Subscription Expiration Notification
 
 * **Trigger:** Daily
 * **Target Users:** Subscribers whose subscription ends in **5 days**
@@ -20,7 +20,7 @@ The system includes two scheduled background jobs implemented via **Hangfire**, 
 * **WhatsApp Template:** Same name
 * **Personalization:** Includes user name and expiration date
 
-#### 📋 Example Message (Email):
+####  Example Message (Email):
 
 > Hello Sarah,
 > Your subscription is set to expire on 20 May, 2025. 😔
@@ -28,7 +28,7 @@ The system includes two scheduled background jobs implemented via **Hangfire**, 
 
 ---
 
-### 🔁 2. Rental Expiration Reminder
+###  2. Rental Expiration Reminder
 
 * **Trigger:** Daily
 * **Target Users:** Subscribers who have book copies that expire **tomorrow**
@@ -37,19 +37,19 @@ The system includes two scheduled background jobs implemented via **Hangfire**, 
 * **WhatsApp Template:** `RentalExpirationAlert`
 * **Personalization:** User name, expiration date, list of book titles
 
-#### 📋 Example Message (Email):
+####  Example Message (Email):
 
 > Hello Ahmed,
-> Your rental for the below book(s) will expire by tomorrow 15 May, 2025 💔:
+> Your rental for the below book(s) will expire by tomorrow 15 May, 2025 :
 >
 > * Clean Code
 > * Atomic Habits
 >
-> 📆 Please return them on time to avoid any late fees.
+>  Please return them on time to avoid any late fees.
 
 ---
 
-### ✅ Technologies Used:
+###  Technologies Used:
 
 | Feature          | Implementation                       |
 | ---------------- | ------------------------------------ |
@@ -60,7 +60,7 @@ The system includes two scheduled background jobs implemented via **Hangfire**, 
 
 ---
 
-### ⏱️ Execution Logic Summary
+###  Execution Logic Summary
 
 * The jobs run **asynchronously** and in parallel to reduce latency using `Task.WhenAll()`.
 * If the app is in development mode, all messages are redirected to a **test phone number**.
