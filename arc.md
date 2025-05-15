@@ -21,26 +21,27 @@ Dependencies always point inward. Outer layers depend on inner layers, ensuring 
 
 ⸻
 
-Solution Structure
+### **Solution Structure**
 
-Project Name	Responsibility
-LitraLand.Domain	Core domain models and interfaces. No external dependencies.
-LitraLand.Application	Application logic, use cases, DTOs, and service contracts.
-LitraLand.Infrastructure	Implements interfaces from Domain and Application (e.g., EF Core Repositories).
-LitraLand.Web	ASP.NET Core MVC app with Controllers, Views, and UI handling.
+| Project Name                 | Responsibility                                                                    |
+| ---------------------------- | --------------------------------------------------------------------------------- |
+| **LitraLand.Domain**         | Contains the core domain models and interfaces. No external dependencies.         |
+| **LitraLand.Application**    | Contains the application logic, use cases, DTOs, and service contracts.           |
+| **LitraLand.Infrastructure** | Implements the interfaces in Domain and Application (e.g., EF Core Repositories). |
+| **LitraLand.Web**            | The MVC Web application that contains Controllers, Views, and handles UI/UX.      |
 
 
-⸻
+### **Clean Architecture VS Traditional MVC **
 
-Clean Architecture vs Traditional MVC
+| Aspect                 | Traditional MVC | Clean Architecture in LitraLand     |
+| ---------------------- | --------------- | ----------------------------------- |
+| Structure              | Single Project  | Multiple Projects (Layered)         |
+| Separation of Concerns | Limited         | Strong Separation                   |
+| Testability            | Medium          | High                                |
+| Maintainability        | Medium          | High                                |
+| Dependencies           | All in one      | Core domain has **no** dependencies |
 
-Aspect	Traditional MVC	Clean Architecture (LitraLand)
-Structure	Single Project	Multi-Project (Layered)
-Separation of Concerns	Limited	Strong
-Testability	Medium	High
-Maintainability	Medium	High
-Dependencies	All-in-one	Domain Layer has no dependencies
-
+---
 
 ⸻
 
