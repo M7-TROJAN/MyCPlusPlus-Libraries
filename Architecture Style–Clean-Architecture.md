@@ -9,7 +9,7 @@
 
 The system architecture of LitraLand follows the Clean Architecture style. This pattern organizes the system into clear layers with one-way dependency rules, making the application modular, testable, and maintainable.
 
-هنحط هنا الدياجرام الرسمة بتاعت الدواير الي قولتلك اعملها يامصطفي 
+هنحط هنا الدياجرام الرسمة بتاعت الدواير الي قولتلك اعملها يامصطفي ##  
 
 As shown in the architecture diagram, the system consists of four main layers:
 	•	Domain Layer (LitraLand.Domain):
@@ -76,7 +76,7 @@ This separation into areas improves scalability and makes it easier to manage la
 
 ⸻
 
-هنحط هنا الدياجرام بتاع ال mvc الي احنا واخدينه من الدكيومنتيشن القديمة
+هنحط هنا الدياجرام بتاع ال mvc الي احنا واخدينه من الدكيومنتيشن القديمة ## 
 
 
 
