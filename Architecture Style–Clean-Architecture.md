@@ -62,7 +62,7 @@ Depends on Application and Infrastructure.
 
 ---
 
-### **مقارنة سريعة مع MVC التقليدي**
+### **Clean Architecture VS Traditional MVC **
 
 | Aspect                 | Traditional MVC | Clean Architecture in LitraLand     |
 | ---------------------- | --------------- | ----------------------------------- |
