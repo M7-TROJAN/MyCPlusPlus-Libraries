@@ -72,3 +72,4 @@ Offers a social platform for users to interact, view other users’ books, and m
 This area-based structure helps in isolating features, simplifying routing, and scaling individual sections independently.
 
 ⸻
+[Insert MVC Diagram Here]
