@@ -52,10 +52,13 @@ Dependencies always point inward. Outer layers depend on inner layers, ensuring 
 2.1.2 Model View Controller (MVC)
 
 The Presentation Layer (LitraLand.Web) follows the Model-View-Controller (MVC) design pattern, which separates the system into:
+
 	•	Model:
 Contains data models and view models used to transfer data between controllers and views.
+
 	•	View:
 Renders HTML output using Razor templates.
+
 	•	Controller:
 Handles incoming HTTP requests, interacts with the Application layer, and returns appropriate views or responses.
 
@@ -66,10 +69,13 @@ This pattern improves maintainability, scalability, and testability by decouplin
 2.1.3 Areas Structure
 
 To improve modularity and better manage the system’s features, the Presentation Layer is organized into three main Areas:
+
 	•	Identity Area:
 Responsible for user authentication and account-related operations such as login, registration, password reset, email verification, and two-factor authentication.
+
 	•	Library Area:
 Handles core library functionalities including categories, authors, books, copies, rentals, and subscribers. It is primarily used by staff roles such as Archive and Receptionist.
+
 	•	Community Area:
 Offers a social platform for users to interact, view other users’ books, and manage personal listings for book exchange or sale. Users can create profiles and browse books shared by others.
 
