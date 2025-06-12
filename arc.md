@@ -7,12 +7,16 @@ The system architecture of LitraLand follows the Clean Architecture style. This 
 [Insert Architecture Diagram Here]
 
 As shown in the architecture diagram, the system is divided into four main layers:
+
 	•	Domain Layer (LitraLand.Domain):
 Contains the core business entities, enums, and interfaces. It is the innermost and most independent layer with no dependencies on other layers.
+
 	•	Application Layer (LitraLand.Application):
 Contains application logic, service contracts, use cases, and validations. It only depends on the Domain layer.
+
 	•	Infrastructure Layer (LitraLand.Infrastructure):
 Provides implementations for interfaces defined in the Domain or Application layers. Examples include database access, email services, file handling, etc. This layer depends on the inner layers but is not depended on by them.
+
 	•	Presentation Layer (LitraLand.Web):
 An ASP.NET Core MVC project responsible for the user interface and request handling. It communicates with the Application layer to process logic and present output.
 
