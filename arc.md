@@ -1,85 +1,70 @@
-2.1 Architecture Style
-
-2.1.1 Clean Architecture
-
-The system architecture of LitraLand follows the Clean Architecture style. This pattern organizes the system into well-defined layers with one-way dependency rules, which enhances modularity, testability, and maintainability.
-
-[Insert Architecture Diagram Here]
-
-As shown in the architecture diagram, the system is divided into four main layers:
-
-	•	Domain Layer (LitraLand.Domain):
-Contains the core business entities, enums, and interfaces. It is the innermost and most independent layer with no dependencies on other layers.
-
-	•	Application Layer (LitraLand.Application):
-Contains application logic, service contracts, use cases, and validations. It only depends on the Domain layer.
-
-	•	Infrastructure Layer (LitraLand.Infrastructure):
-Provides implementations for interfaces defined in the Domain or Application layers. Examples include database access, email services, file handling, etc. This layer depends on the inner layers but is not depended on by them.
-
-	•	Presentation Layer (LitraLand.Web):
-An ASP.NET Core MVC project responsible for the user interface and request handling. It communicates with the Application layer to process logic and present output.
-
-Dependency Flow:
-Dependencies always point inward. Outer layers depend on inner layers, ensuring that business logic is completely isolated from external concerns.
-
-⸻
-
-### **Solution Structure**
-
-| Project Name                 | Responsibility                                                                    |
-| ---------------------------- | --------------------------------------------------------------------------------- |
-| **LitraLand.Domain**         | Contains the core domain models and interfaces. No external dependencies.         |
-| **LitraLand.Application**    | Contains the application logic, use cases, DTOs, and service contracts.           |
-| **LitraLand.Infrastructure** | Implements the interfaces in Domain and Application (e.g., EF Core Repositories). |
-| **LitraLand.Web**            | The MVC Web application that contains Controllers, Views, and handles UI/UX.      |
-
-
-### **Clean Architecture VS Traditional MVC **
-
-| Aspect                 | Traditional MVC | Clean Architecture in LitraLand     |
-| ---------------------- | --------------- | ----------------------------------- |
-| Structure              | Single Project  | Multiple Projects (Layered)         |
-| Separation of Concerns | Limited         | Strong Separation                   |
-| Testability            | Medium          | High                                |
-| Maintainability        | Medium          | High                                |
-| Dependencies           | All in one      | Core domain has **no** dependencies |
+جميل جدًا، نبدأ بـ **Chapter 18: Technologies Used** — وده فصل بيعرض كل التقنيات اللي استخدمناها في بناء مشروع **LitraLand**، مع توضيح دور كل تقنية وليه اخترناها. لازم نكتب الكلام بشكل واضح ومهني.
 
 ---
 
-⸻
+### **18. Technologies Used**
 
-2.1.2 Model View Controller (MVC)
+The development of *LitraLand* involved a combination of modern technologies and tools to ensure scalability, performance, security, and ease of use. Below is an overview of the main technologies used in the system:
 
-The Presentation Layer (LitraLand.Web) follows the Model-View-Controller (MVC) design pattern, which separates the system into:
+---
 
-	•	Model:
-Contains data models and view models used to transfer data between controllers and views.
+#### **1. ASP.NET Core MVC**
 
-	•	View:
-Renders HTML output using Razor templates.
+* **Purpose:** Backend development and server-side rendering.
+* **Why Used:** ASP.NET Core MVC is a robust and modern web framework that supports clean separation of concerns, strong routing, and integrated dependency injection. It allowed us to build scalable and maintainable web applications with high performance.
 
-	•	Controller:
-Handles incoming HTTP requests, interacts with the Application layer, and returns appropriate views or responses.
+#### **2. Entity Framework Core**
 
-This pattern improves maintainability, scalability, and testability by decoupling the user interface from the business logic.
+* **Purpose:** ORM (Object-Relational Mapping) to handle database interactions.
+* **Why Used:** EF Core simplifies database access by allowing developers to interact with the database using C# objects, instead of raw SQL. It also supports code-first and migration-based workflows, which helped us manage and evolve the database schema easily.
 
-⸻
+#### **3. Microsoft SQL Server**
 
-2.1.3 Areas Structure
+* **Purpose:** Primary relational database.
+* **Why Used:** SQL Server is reliable, scalable, and well-integrated with EF Core. It provides advanced querying capabilities, performance optimization tools, and strong support for transactions and indexing.
 
-To improve modularity and better manage the system’s features, the Presentation Layer is organized into three main Areas:
+#### **4. Identity Framework**
 
-	•	Identity Area:
-Responsible for user authentication and account-related operations such as login, registration, password reset, email verification, and two-factor authentication.
+* **Purpose:** User authentication and authorization.
+* **Why Used:** ASP.NET Identity enabled us to manage user accounts, roles, password hashing, and security features such as two-factor authentication, all within a flexible system.
 
-	•	Library Area:
-Handles core library functionalities including categories, authors, books, copies, rentals, and subscribers. It is primarily used by staff roles such as Archive and Receptionist.
+#### **5. Bootstrap**
 
-	•	Community Area:
-Offers a social platform for users to interact, view other users’ books, and manage personal listings for book exchange or sale. Users can create profiles and browse books shared by others.
+* **Purpose:** Frontend styling and responsive layout.
+* **Why Used:** Bootstrap provided a fast and responsive UI with ready-made components like forms, buttons, modals, and navigation bars. It ensured the application looks good on all screen sizes.
 
-This area-based structure helps in isolating features, simplifying routing, and scaling individual sections independently.
+#### **6. JavaScript & AJAX**
 
-⸻
-[Insert MVC Diagram Here]
+* **Purpose:** Enhancing interactivity and dynamic loading of content (e.g., book filtering and infinite scroll).
+* **Why Used:** JavaScript and AJAX were used to make the user experience more fluid and responsive, especially in the Community area for filtering, searching, and loading books without page reloads.
+
+#### **7. Google & Facebook Authentication**
+
+* **Purpose:** External login integration.
+* **Why Used:** To make registration and login easier for users, we implemented Google and Facebook login using OAuth2. This improved user experience and reduced friction in onboarding.
+
+#### **8. LINQ (Language Integrated Query)**
+
+* **Purpose:** Querying collections and database entities.
+* **Why Used:** LINQ provided a concise, readable, and powerful way to query data, especially when filtering books or generating statistics in the Community module.
+
+#### **9. Hangfire**
+  A background job processing library used to schedule tasks like sending emails and cleanup operations without affecting the user experience.
+
+#### **10. Hashids**
+  A library used to obfuscate database IDs in URLs, enhancing security and preventing users from easily guessing record identifiers.
+
+#### **11. SweetAlert2**
+
+* **Purpose:** Displaying custom popup alerts for user actions.
+* **Why Used:** For better user feedback and interface consistency, SweetAlert2 was used for confirmation messages, success notifications, and error alerts.
+
+#### **12. Git & GitHub**
+
+* **Purpose:** Version control and collaboration.
+* **Why Used:** Git helped track code changes and collaborate effectively. GitHub was used to host the project repository, manage issues, and maintain version history.
+
+
+________________________________________________________________________________________________________________________________________________________-
+
+
